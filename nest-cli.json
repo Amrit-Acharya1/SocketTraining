@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/broadcaster-tensor/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/broadcaster-tensor/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/broadcaster-tensor",
+  "projects": {
+    "base_broadcaster": {
+      "type": "application",
+      "root": "apps/base_broadcaster",
+      "entryFile": "main",
+      "sourceRoot": "apps/base_broadcaster/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/base_broadcaster/tsconfig.app.json"
+      }
+    },
+    "broadcaster-tensor": {
+      "type": "application",
+      "root": "apps/broadcaster-tensor",
+      "entryFile": "main",
+      "sourceRoot": "apps/broadcaster-tensor/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/broadcaster-tensor/tsconfig.app.json"
+      }
+    },
+    "event_receiver": {
+      "type": "application",
+      "root": "apps/event_receiver",
+      "entryFile": "main",
+      "sourceRoot": "apps/event_receiver/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/event_receiver/tsconfig.app.json"
+      }
+    }
+  }
+}
