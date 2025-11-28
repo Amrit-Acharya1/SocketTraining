@@ -44,3 +44,13 @@ export interface Estimated_Impact {
   new_ip_value: number;
   peg_restoration_percent: number;
 }
+
+export interface ModifiedData extends TusdtBroadcastResponse{
+
+  validated: boolean;
+  processed_at: number;
+  should_execute: boolean;
+  priority: string;
+
+}
+
