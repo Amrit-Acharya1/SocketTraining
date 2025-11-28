@@ -28,6 +28,15 @@
         "tsConfigPath": "apps/broadcaster-tensor/tsconfig.app.json"
       }
     },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
     "event_receiver": {
       "type": "application",
       "root": "apps/event_receiver",
