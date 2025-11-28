@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { EventReceiverController } from './event_receiver.controller';
-import { EventReceiverService } from './event_receiver.service';
+import { EventReceiverClient } from './event-receiver.client';
+import { EventReceiverGateway } from './event-receiver.gateway';
+
 
 @Module({
   imports: [],
-  controllers: [EventReceiverController],
-  providers: [EventReceiverService],
+  controllers: [],
+  providers: [EventReceiverClient, EventReceiverGateway],
 })
 export class EventReceiverModule {}
