@@ -10,17 +10,17 @@ export class EventReceiverService{
     priorityDefine(urgency:string, deviation_type:boolean):string{
         if(deviation_type){
 
-            if(urgency === 'CRITICAL'){
+            if(urgency === 'critical'){
                 return 'high_sell';
-            }else if(urgency === 'HIGH'){
+            }else if(urgency === 'high'){
                 return 'medium_sell';
             }else{
                 return 'low_sell';
             }
         }else{
-            if(urgency === 'CRITICAL'){
+            if(urgency === 'critical'){
                 return 'high_buy';
-            }else if(urgency === 'HIGH'){
+            }else if(urgency === 'high'){
                 return 'medium_buy';
             }else{
                 return 'low_buy';
@@ -34,7 +34,7 @@ export class EventReceiverService{
             ...data,
             deviation_type: data.data.deviation_percent>0,
             processed_at: Date.now(),
-            should_execute: data.data.signal.urgency === 'CRITICAL' || data.data.signal.urgency === 'HIGH' ? true : false,
+            should_execute: data.data.signal.urgency === 'critical' || data.data.signal.urgency === 'high' ? true : false,
             priority: this.priorityDefine(data.data.signal.urgency, data.data.deviation_percent>0),
         }
         return modifiedData;
