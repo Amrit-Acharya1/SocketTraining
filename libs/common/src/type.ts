@@ -54,3 +54,8 @@ export interface ModifiedData extends TusdtBroadcastResponse{
 
 }
 
+export interface FinalData extends ModifiedData{
+
+  signal: string;
+}
+
