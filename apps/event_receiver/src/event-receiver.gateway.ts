@@ -8,6 +8,7 @@ export class EventReceiverGateway {
     @WebSocketServer() server :Server;
 
     broadcastModifiedData(event:string, data:ModifiedData){
+
         this.server.emit(event, data);
     }
 

@@ -20,7 +20,7 @@ export class EventReceiverClient implements OnModuleInit {
       console.log('Connected to BaseBroadcaster');
     });
 
-        this.socket.on('baseprice', (data: TusdtBroadcastResponse) => {
+      this.socket.on('basedata', (data: TusdtBroadcastResponse) => {
       this.receiverService.broadcastMarkedData(data);
     });
 
