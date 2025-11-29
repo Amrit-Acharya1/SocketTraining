@@ -47,7 +47,7 @@ export interface Estimated_Impact {
 
 export interface ModifiedData extends TusdtBroadcastResponse{
 
-  validated: boolean;
+  deviation_type: boolean;
   processed_at: number;
   should_execute: boolean;
   priority: string;
